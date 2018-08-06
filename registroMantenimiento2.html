@@ -1,0 +1,119 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+    <title>Registro de Clientes</title>
+
+    <link href="loggin/css.css" rel="stylesheet" />>
+    <link href="Content/bootstrap.css" rel="stylesheet" />
+    <link href="pushy-master/css/demo.css" rel="stylesheet" />
+    <link href="pushy-master/css/normalize.css" rel="stylesheet" />
+    <link href="Content/bootstrap.min.css" rel="stylesheet" />
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="Scripts/scanner.js"></script>
+    <script src="Scripts/jquery-3.3.1.min.js"></script>
+    <script src="Scripts/bootstrap.min.js"></script>
+    <script src="Scripts/jquery.validate.js"></script>
+    <script src="Scripts/bootbox.min.js"></script>
+    <link href="Content/css/jquery.dataTables.min.css" rel="stylesheet" />
+    <script src="Scripts/jquery.dataTables.min.js"></script>
+    <script src="Scripts/mantenimiento.js"></script>
+
+    <style>
+        .table {
+            font-size: 0.8em;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="page-header">
+            <Center><h2>REGISTRO DE MANTENIMIENTO</h2></Center>
+            <center>
+                <ul class="nav nav-pills nav-stacked">
+                    <li role="presentation">
+                        <a href="menu2.html">
+                            <span class="glyphicon glyphicon-home"></span> Regresar al menu
+                        </a>
+                    </li>
+                </ul>
+            </center>
+        </div>
+
+        <!-- Menu de Taps -->
+        <ul class="nav nav-pills" role="tablist">
+            <li role="presentation" class="active">
+                <a href="#registro" aria-controls="registro" role="tab" data-toggle="tab">Registrar</a>
+            </li>
+            <li role="presentation">
+                <a href="#listado" aria-controls="listado" role="tab" data-toggle="tab">Listado</a>
+            </li>
+        </ul>
+        <div class="tab-content">
+            <div role="tabpanel" class="tab-pane active" id="registro">
+                <form id="form1">
+                    <input id="Id" value="0" type="hidden" />
+                    <div class="panel">
+                        <div class="panel-body">
+                            <div class="form-group">
+                                <div class="input-group">
+                                    <center>
+                                        <button id="startScan" class="btn btn-success">
+                                            <span class="glyphicon glyphicon-barcode"></span>
+                                        </button>
+                                    </center>
+                                    <input type="text" class="form-control" id="Escaner" name="Escaner" placeholder="Escaner" />
+                                    <div class="input-group-btn">
+                                        <!--<span class="btn btn-success" id="startScan">
+                                            <span class="glyphicon glyphicon-barcode"></span>
+                                        </span>-->
+                                    </div>
+                                </div>
+
+
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="form-control" id="Hora" name="Hora" placeholder="Horas" />
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="form-control" id="Detalles" name="Detalles" placeholder="Detalles" />
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="form-control" id="Solucion" name="Solucion" placeholder="Solucion" />
+                            </div>
+
+                        </div>
+                        <div class="panel-footer text-center">
+                            <button type="submit" class="btn btn-primary">
+                                <span class="glyphicon glyphicon-floppy-save"></span> Guardar
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div role="tabpanel" class="tab-pane" id="listado">
+                <!-- Contenido de la tabla de alumnos -->
+                <table class="table table-bordered" id="ListadoMantenimiento">
+                    <thead>
+
+                        <tr>
+                            <th><span class="glyphicon glyphicon-cog" </span></th>
+                            <th>Escaner</th>
+                            <th>Hora</th>
+                            <th>Detalles</th>
+                            <th>Solucion</th>
+
+
+                        </tr>
+                    </thead>
+                    <tbody id="TablaMantenimiento"></tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

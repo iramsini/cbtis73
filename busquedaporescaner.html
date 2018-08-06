@@ -1,0 +1,73 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+    <title>Registro Final</title>
+
+    <link href="loggin/css.css" rel="stylesheet" />
+   
+    <link href="Content/bootstrap.min.css" rel="stylesheet" />
+
+    <script src="Scripts/jquery-3.3.1.min.js"></script>
+    <script src="Scripts/bootstrap.min.js"></script>
+    <script src="Scripts/jquery.validate.js"></script>
+    <script src="Scripts/bootbox.min.js"></script>
+    <link href="Content/bootstrap.css" rel="stylesheet" />
+    <script src="Scripts/nowDate.js"></script>
+    <link rel="stylesheet" href="plugins/DataTables/datatables.min.css" />
+    <!--// <link href="Content/css/jquery.dataTables.min.css" rel="stylesheet" />-->
+    <!--// <script src="Scripts/jquery.dataTables.min.js"></script>-->
+    <script type="text/javascript" src="plugins/DataTables/datatables.min.js"></script>
+
+
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="Scripts/scanner.js"></script>
+    <script src="Scripts/Registrofinal.js"></script>
+
+</head>
+<body>
+    <center>
+
+        <ul class="nav nav-pills nav-stacked">
+            <li role="presentation">
+                <a href="menu.html">
+                    <span class="glyphicon glyphicon-home"></span> Regresar al menu
+                </a>
+            </li>
+        </ul>
+    </center>
+    <h1>Escaneo de alumnos</h1>
+
+    <!--<--  Large modal -->
+    <div class="input-group">
+        <input id="Escaner" type="text" class="form-control" placeholder="Escaner" disabled/>
+        <div class="input-group-btn">
+            <span class="btn btn-success" id="startScan">
+                <span class="glyphicon glyphicon-barcode"></span>
+            </span>
+        </div>
+    </div>
+    <p>&nbsp;</p>
+    <center><button id="mensajescaner" type="button" class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-lg">Información</button></center>
+    <div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content" id="mdl">
+                <table class="table table-bordered" id="ListadoRegistro">
+
+                    <thead>
+                        <tr>
+
+                            <th>Escaner</th>
+                            <th>Alumno</th>
+                            <th>Grado/Grupo</th>
+                            <th>Fecha y hora</th>
+                        </tr>
+                    </thead>
+                    <tbody id="ContenidoModal"></tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
